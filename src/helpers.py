@@ -18,7 +18,6 @@ class helpers:
     def tokenize_and_align_labels(self,examples,tokenizer):
         _tokenized_inputs = tokenizer(examples["tokens"], is_split_into_words=True)
         _tokenized_inputs["document"] = examples["document"]
-        _tokenized_inputs["tokens"] = examples["tokens"]
 
         _labels = []
         _label=examples[f"labels_id"]
